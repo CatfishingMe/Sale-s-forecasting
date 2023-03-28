@@ -21,3 +21,8 @@ class DatasetsData(models.Model):
     period_of_time = models.DateField()
     cars_count = models.IntegerField(max_length=5)
     dataset_id = models.ForeignKey('Datasets', on_delete=models.CASCADE)
+
+
+class Results(models.Model):
+    forecast = models.JSONField()
+    data_id = models.ForeignKey('DatasetsData', on_delete=models.CASCADE)
