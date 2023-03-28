@@ -15,3 +15,9 @@ class Datasets(models.Model):
     created_date = models.DateField(auto_now_add=True,
                                     verbose_name='Дата создания датасета')
     dealer_id = models.ForeignKey('Dealers', on_delete=models.CASCADE)
+
+
+class DatasetsData(models.Model):
+    period_of_time = models.DateField()
+    cars_count = models.IntegerField(max_length=5)
+    dataset_id = models.ForeignKey('Datasets', on_delete=models.CASCADE)
