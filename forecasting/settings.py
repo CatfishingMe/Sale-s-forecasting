@@ -37,7 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'csv_loader.apps.CsvLoaderConfig'
+    'csv_loader.apps.CsvLoaderConfig',
+    'db.apps.DbConfig'
 ]
 
 MIDDLEWARE = [
